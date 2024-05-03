@@ -51,7 +51,7 @@ int main() {
 
         // Approximate gradient of 2D function
         float dw = (loss(w + eps, b) - loss(w, b)) / eps;
-        float db = (loss(w , b + eps) - loss(w, b)) / eps;
+        float db = (loss(w, b + eps) - loss(w, b)) / eps;
 
         w -= rate * dw;
         b -= rate * db;
