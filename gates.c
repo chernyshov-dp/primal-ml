@@ -5,7 +5,7 @@
 
 #define train_count (sizeof(train) / sizeof(train[0]))
 
-// OR-gate
+// OR-gate (could be replaced with NOR, AND or NAND gate)
 float train[][3] = {
     {0, 0 , 0},
     {1, 0 , 1},
