@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <time.h>
 
 typedef struct {
     float or_w1;
@@ -156,6 +157,7 @@ Xor fit(Xor m, Xor g, float rate) {
 }
 
 int main() {
+    srand(time(0));
     Xor m = rand_xor();
 
     float eps = 1e-1;
@@ -172,6 +174,13 @@ int main() {
         for (size_t j = 0; j < 2; j++) {
             printf("%zu ⊕ %zu = %f\n", i, j, forward(m, i, j));
         }
+    }
+    printf("------------------------------\n");
+    printf("\"OR\" neuron:\n"); // Might work not as expected
+    for (size_t i = 0; i < 2; i++) {
+	for (size_t j = 0; j < 2; j++) {
+	    printf("%zu | %zu = %f\n", i, j, sigmoidf(m.or_w1 * i + m.or_w2 * j + m.or_b));
+	}
     }
 
     return 0;
