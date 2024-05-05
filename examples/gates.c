@@ -14,7 +14,7 @@ float train[][3] = {
 };
 
 float rand_float(void) {
-  return  (float)rand() / (float)RAND_MAX;
+  return (float)rand() / (float)RAND_MAX;
 }
 
 float sigmoidf(float x) {

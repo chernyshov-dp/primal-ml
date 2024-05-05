@@ -19,7 +19,7 @@ float train[][2] = {
 #define train_count (sizeof(train) / sizeof(train[0]))
 
 float rand_float(void) {
-  return  (float)rand() / (float)RAND_MAX;
+  return (float)rand() / (float)RAND_MAX;
 }
 
 // Loss function
